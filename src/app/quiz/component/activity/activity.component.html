@@ -1,0 +1,29 @@
+<div class="main-wrapper container-fluid">
+
+  <div class="header row">
+    <div class="col-md-10 col-sm-10">
+      <h1 class="main-heading">Your Turn: Vocabulary</h1>
+    </div>
+    <div class="nav-button col-md-2 col-sm-2">
+      <button class="help-button" aria-label="help">
+        <i class="fa fa-question-circle"></i>
+      </button>
+      <button class="close-button" aria-label="close">
+        <i class="fa fa-times-circle"></i>
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <app-mcq (messageEvent)="receiveMessage($event)" (vaultAnimData)="receiveAnimData($event)" (initVault)=initVault($event)></app-mcq>
+    <app-vault (rotationComplete)="rotationStatus($event)"></app-vault>
+  </div>
+  <div class="footer row">
+    <div class="footer-elements" #footerRounds>
+      <div aria-label="set1 quiz" class="round-incomplete"></div>
+      <div aria-label="set2 quiz" class="round-incomplete"></div>
+      <div aria-label="set3 quiz" class="round-incomplete"></div>
+    </div>
+  </div>
+
+
+</div>

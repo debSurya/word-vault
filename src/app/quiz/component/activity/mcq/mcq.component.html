@@ -1,0 +1,25 @@
+<div class="body-wrapper ">
+  <div class="body-header col-md-12 col-sm-12">
+    <button aria-label="read vocabulary">
+      <i class="fa fa-volume-up"></i>
+    </button>
+    <h2>Read each sentence. Choose the vocabulary word that completes each sentence.</h2>
+  </div>
+  <div class="mcq-container col-md-12 col-sm-12">
+    <div class="question-text">
+      <span>{{currentPageData.questionText}}</span>
+    </div>
+    <div class="option-container col-md-6 col-sm-6">
+      <div class="each-option" #optionText *ngFor="let page of currentPageData.options;let i = index">
+        <div (click)="selectAnswer(page,i)">{{page}}</div>
+        <button attr.aria-label="option{{i+1}}" #option (click)="selectAnswer(page,i)">
+          <i class="fa fa-play-circle"></i>
+        </button>
+      </div>
+      <div class="submit-portion">
+        <button class="reset-button" (click)="resetQuiz()">Reset</button>
+        <button class="ok-button width-75" (click)="submit()" [disabled]="disableSubmit">OK</button>
+      </div>
+    </div>
+  </div>
+</div>

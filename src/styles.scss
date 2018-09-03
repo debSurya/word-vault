@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+button[disabled],
+html input[disabled] {
+    cursor: default !important;
+    background-color: #738fb7 !important;
+}
+
+button[disabled]:hover {
+    cursor: default !important;
+    background-color: #738fb7 !important;
+}
+
+body {
+    font-family: Franklin Gothic Medium !important;
+}
